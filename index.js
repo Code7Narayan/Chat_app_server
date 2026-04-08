@@ -12,6 +12,9 @@ const io = socketIO(server, {
 
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Server is running 🚀');
+});
 
 // Store connected users
 let users = [];
